@@ -1,0 +1,20 @@
+﻿<add>
+<doc>
+<field name="id">123</field>
+<field name="title">Ruslan and Ludmila</field>
+<field name="author">Pushkin</field>
+<field name="allfields">Ruslan and Ludmila Pushkin</field>
+<field name="genre">Худлит</field>
+<field name="isbn">1.1.1.1.1</field>
+<field name="collection">РУДОМИНО</field>
+</doc>
+<doc>
+<field name="id">234</field>
+<field name="title">Мёртвые души</field>
+<field name="author">Гоголь</field>
+<field name="allfields">Mertvie dushi</field>
+<field name="genre">HudLit</field>
+<field name="isbn">2.2.2.2.2</field>
+<field name="collection">детский зал</field>
+</doc>
+</add>
