@@ -50,6 +50,12 @@
               <?=!empty($summAuthor) ? '<br />' : ''?>
               <?=$this->transEsc('Published') . ' ' . $this->escapeHtml($summDate[0])?>
             <? endif; ?>
+            <? /* adds ISBN by RD -- begin */?>
+            <? $ISBN = $this->driver->getCleanISBN() ?>
+            <? if (!empty($ISBN)): ?>
+              <?='<br />' . $this->transEsc('ISBN') . ' ' . $this->escapeHtml($ISBN)?>
+            <? endif; ?>
+            <? /* adds ISBN by RD -- end */?>
             <? $summInCollection = $this->driver->getContainingCollections(); if (!empty($summInCollection)): ?>
               <? foreach ($summInCollection as $collId => $collText): ?>
                 <div>
