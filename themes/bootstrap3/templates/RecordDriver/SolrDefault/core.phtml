@@ -177,6 +177,15 @@
       </tr>
       <? endif; ?>
 
+      <? /* adds ISBN by RD -- begin */?>
+      <? $ISBN = $this->driver->getCleanISBN(); if (!empty($ISBN)): ?>
+      <tr>
+        <th><?=$this->transEsc('ISBN')?>: </th>
+        <td><?=$this->escapeHtml($ISBN)?></td>
+      </tr>
+      <? endif; ?>
+      <? /* adds ISBN by RD -- end */?>
+
       <?/* Display series section if at least one series exists. */?>
       <? $series = $this->driver->getSeries(); if (!empty($series)): ?>
       <tr>
