@@ -173,7 +173,7 @@
       <? $edition = $this->driver->getEdition(); if (!empty($edition)): ?>
       <tr>
         <th><?=$this->transEsc('Edition')?>: </th>
-        <td property="bookEdition"><?=$this->escapeHtml($edition)?></td>
+        <td property="bookEdition"><?=$this->escapeHtml($edition[0])?></td>
       </tr>
       <? endif; ?>
 
