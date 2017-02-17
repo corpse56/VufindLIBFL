@@ -684,6 +684,17 @@ class SolrDefault extends AbstractBase
     }
 
     /**
+     * Get a PlaceOfPublication, if available.
+     *
+     * @return array
+     */
+    public function getPlaceOfPublication()
+    {
+        return isset($this->fields['PlaceOfPublication']) && is_array($this->fields['PlaceOfPublication']) ?
+            $this->fields['PlaceOfPublication'] : [];
+    }
+
+    /**
      * Get an array of all ISSNs associated with the record (may be empty).
      *
      * @return array

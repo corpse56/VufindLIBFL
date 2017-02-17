@@ -188,6 +188,17 @@
       <? endif; ?>
       <? /* adds ISBNs by RD -- end */?>
 
+      <? /* adds PlaceOfPublication by RD -- begin */?>
+      <? $PlaceOfPublication = $this->driver->getPlaceOfPublication(); if (!empty($PlaceOfPublication)): ?>
+        <? foreach ($PlaceOfPublication as $v): ?>
+          <tr>
+            <th><?=$this->transEsc('PlaceOfPublication')?>: </th>
+            <td><?=$this->escapeHtml($v)?></td>
+          </tr>
+        <? endforeach; ?>
+      <? endif; ?>
+      <? /* adds PlaceOfPublication by RD -- end */?>
+
       <?/* Display series section if at least one series exists. */?>
       <? $series = $this->driver->getSeries(); if (!empty($series)): ?>
       <tr>

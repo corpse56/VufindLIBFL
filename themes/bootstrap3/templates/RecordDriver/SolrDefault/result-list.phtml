@@ -58,6 +58,14 @@
               <? endforeach; ?>
             <? endif; ?>
             <? /* adds ISBNs by RD -- end */?>
+            <? /* adds PlaceOfPublication by RD -- begin */?>
+            <? $PlaceOfPublication = $this->driver->getPlaceOfPublication(); ?>
+            <? if (!empty($PlaceOfPublication)): ?>
+              <? foreach ($PlaceOfPublication as $v): ?>
+                <?='<br />' . $this->transEsc('PlaceOfPublication') . ' ' . $this->escapeHtml($v);?>
+              <? endforeach; ?>
+            <? endif; ?>
+            <? /* adds PlaceOfPublication by RD -- end */?>
             <? $summInCollection = $this->driver->getContainingCollections(); if (!empty($summInCollection)): ?>
               <? foreach ($summInCollection as $collId => $collText): ?>
                 <div>
