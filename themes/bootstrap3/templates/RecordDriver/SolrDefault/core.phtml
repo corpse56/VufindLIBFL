@@ -171,10 +171,12 @@
       <? endif; ?>
 
       <? $edition = $this->driver->getEdition(); if (!empty($edition)): ?>
-      <tr>
-        <th><?=$this->transEsc('Edition')?>: </th>
-        <td property="bookEdition"><?=$this->escapeHtml($edition[0])?></td>
-      </tr>
+        <? foreach ($edition as $v): ?>
+          <tr>
+            <th><?=$this->transEsc('Edition')?>: </th>
+            <td property="bookEdition"><?=$this->escapeHtml($v)?></td>
+          </tr>
+        <? endforeach; ?>
       <? endif; ?>
 
       <? /* adds ISBNs by RD -- begin */?>
