@@ -62,7 +62,7 @@
             <? $PlaceOfPublication = $this->driver->getPlaceOfPublication(); ?>
             <? if (!empty($PlaceOfPublication)): ?>
               <? foreach ($PlaceOfPublication as $v): ?>
-                <?='<br />' . $this->transEsc('PlaceOfPublication') . ' ' . $this->escapeHtml($v);?>
+                <?='<br />' . $this->transEsc('Place Of Publication') . ' ' . $this->escapeHtml($v);?>
               <? endforeach; ?>
             <? endif; ?>
             <? /* adds PlaceOfPublication by RD -- end */?>
